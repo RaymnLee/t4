@@ -5,11 +5,10 @@ import GitHubProvider from "next-auth/providers/github";
 
 export default NextAuth({
   ...authOptions,
-  providers: [
+  pproviders: [
     GitHubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      clientId: GITHUB_CLIENT_ID || "",
+      clientSecret: GITHUB_CLIENT_SECRET || "",
     }),
-    // Other providers if needed
   ],
 });
