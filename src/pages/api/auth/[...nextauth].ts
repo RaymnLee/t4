@@ -3,10 +3,9 @@ import GithubProvider from "next-auth/providers/github"
 export const authOptions = {
   providers: [
     GithubProvider({
-      clientId: process.env.GITHUB_CLIENT_ID,
-      clientSecret: process.env.GITHUB_CLIENT_ID,
+      clientId: process.env.GITHUB_CLIENT_ID as string,
+      clientSecret: process.env.GITHUB_CLIENT_ID as string
     }),
-    // ...add more providers here
   ],
 }
 export default NextAuth(authOptions)
